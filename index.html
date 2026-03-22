@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitPick | Discover Your Next Project</title>
+  <meta name="description" content="Find the coolest open-source projects on GitHub instantly. Pick a language and let the magic happen!">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Github Repository Finder</h1>
+    <div class="select-list-container">
+      <select class="select-list" id="langList">
+        <option value="" selected disabled>Select a language</option>
+        <option value="javascript">JavaScript</option>
+        <option value="typescript">TypeScript</option> <option value="python">Python</option>
+        <option value="java">Java</option> <option value="c">C Language</option>
+        <option value="cpp">C++</option>
+        <option value="csharp">C#</option>
+        <option value="go">Go</option>
+        <option value="rust">Rust</option>
+        <option value="php">PHP</option>
+        <option value="swift">Swift</option>
+        <option value="kotlin">Kotlin</option>
+      </select>
+
+      <i class="ri-arrow-down-s-line"></i>
+    </div>
+    
+    <div id="viewCard"></div>
+    
+    <button class="btn" id="searchBtn"></button>
+  </main>
+  
+  <script src="assets/scripts/script.js"></script>
+</body>
+</html>
