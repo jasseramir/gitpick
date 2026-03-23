@@ -76,7 +76,17 @@ function renderPage(repo) {
             break;
         
         case 'loading':
-            viewCard.innerHTML = '<p>Loading... Please wait</p>';
+            viewCard.innerHTML = `
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text-last"></div>
+            <div class="repo-info">
+              <div class="skeleton skeleton-info"></div>
+            </div>
+            <div class="skeleton skeleton-btn"></div>
+            `
             viewCard.classList.add('loading');
             search.disabled = true;
             break;
