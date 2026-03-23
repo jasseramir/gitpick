@@ -32,6 +32,8 @@ It uses the GitHub Search API to provide a randomized selection of repositories 
 
 To run this project locally, you only need a modern web browser.
 
+You can access the live project [here](https://jasseramir.github.io/gitpick/) or:
+
 ### Installation
 
 1. Clone the repository:
