@@ -1,22 +1,32 @@
 # GitPick
 
-GitPick is a web-based application designed to help developers discover open-source projects on GitHub. By leveraging the GitHub Search API, it provides a curated yet randomized selection of repositories based on the user's preferred programming language.
+GitPick is a web-based application that helps developers discover interesting open-source projects on GitHub.  
+It uses the GitHub Search API to provide a randomized selection of repositories based on a chosen programming language.
 
-## Features
+---
 
-- **Language Filtering:** Supports multiple programming languages including JavaScript, Python, C++, Rust, and more.
+## ✨ Features
+
+- **Language Filtering:** Select a programming language (e.g. JavaScript, Python, C, C++, etc.) to find relevant repositories.
 - **Randomized Discovery:** Fetches a diverse range of repositories to encourage exploration of new projects.
-- **Real-time Statistics:** Displays essential repository metadata such as star counts, fork counts, and open issues.
+- **Repository Insights:** Displays essential repository metadata such as:
+    - ⭐ Stars
+    - 🍴 Forks
+    - 🐞 Open Issues
 - **Responsive Design:** A clean, modern user interface optimized for both desktop and mobile devices.
 
-## Tech Stack
+---
 
-- **Frontend:** HTML5, CSS3 (Modern UI with Neubrutalism influences).
-- **Scripting:** Asynchronous JavaScript (ES6+).
-- **API Integration:** GitHub REST API.
-- **Icons:** Remix Icon library.
+## 🛠 Tech Stack
 
-## Getting Started
+- **Frontend:** HTML5, CSS3  
+- **JavaScript:** ES6+ (Async / Fetch API)  
+- **API:** GitHub REST API  
+- **Icons:** Remix Icon
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -26,7 +36,7 @@ To run this project locally, you only need a modern web browser.
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/jasseramir/gitpick.git](https://github.com/jasseramir/gitpick.git)
+   git clone https://github.com/jasseramir/gitpick.git
    ```
 2. Navigate to the project directory:
     ```bash
@@ -34,14 +44,23 @@ To run this project locally, you only need a modern web browser.
     ```
 3. Open ```index.html``` in your browser.
 
-### Project Structure
+---
 
-```index.html```: The main entry point and structure of the application.
-```assets/styles/styles.css```: Contains the layout and styling definitions.
-```assets/scripts/script.js```: Handles API requests and dynamic DOM updates.
+## 📁 Project Structure
+
+index.html                 # Main structure of the app
+assets/styles/styles.css   # UI & layout styling
+assets/scripts/script.js  # Logic and API handling
 
 ---
 
-## Licence
+## ⚠️ Notes
+
+• GitHub API has rate limits for unauthenticated requests.
+If you exceed the limit, the app may temporarily stop working.
+
+---
+
+## 📃 Licence
 
 This project is licensed under the **MIT** License.
