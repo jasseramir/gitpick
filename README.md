@@ -58,6 +58,20 @@ GitPick/
         └── styles.css
 ```
 
+### 📄 File Descriptions
+
+- **index.html**  
+  The main entry point of the application.  
+  Defines the structure and layout of the user interface.
+
+- **styles.css**  
+  Handles all styling and visual design.  
+  Includes layout, colors, and responsive behavior.
+
+- **script.js**  
+  Contains the core logic of the application.  
+  Manages API requests, data processing, and DOM updates.
+
 ---
 
 ## ⚠️ Notes
