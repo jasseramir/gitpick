@@ -3,6 +3,8 @@
 :root {
   --black: #000;
   --white: #fff;
+  --primary-blue: #007bff;
+  --text-main: #1a1a1a;
   --text-gray: #555;
   --failed-bg: #fedddf;
   --failed-text: #4a1b24;
@@ -39,11 +41,26 @@ body {
 }
 
 .title {
-  font-size: clamp(1rem, 6vw, 2rem);
-  font-weight: 800;
-  color: var(--black);
-  margin-bottom: 25px;
-  letter-spacing: -0.5px;
+  font-size: clamp(2rem, 8vw, 3.5rem); 
+  font-weight: 850;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.title span {
+  color: var(--primary-blue);
+}
+
+.subtitle {
+  font-size: clamp(0.9rem, 4vw, 1.2rem);
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.5;
+  opacity: 0.8;
 }
 
 .select-list-container {
