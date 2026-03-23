@@ -6,13 +6,24 @@ function syncSearchButton() {
     search.disabled = list.value === '';
 }
 
+function formatNumber(num) {
+    if (num >= 1000000000) {
+        return (num / 1000000000).toFixed(1).replace(/\.0$/, '') + 'B';
+    } else if (num >= 1000000) {
+        return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+    } else if (num >= 1000) {
+        return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+    }
+    return num.toString();
+}
+
 async function getRepo(value) {
     if (value === '') {
         renderPage('empty');
         return;
     }
     try {
-        const randomPage = Math.floor(Math.random() * 5) + 1;
+        const randomPage = Math.floor(Math.random() * 10) + 1;
         const response = await fetch(`https://api.github.com/search/repositories?q=language:${value}&sort=stars&order=desc&per_page=100&page=${randomPage}`);
         
         if (!response.ok) {
@@ -84,33 +95,29 @@ function renderPage(repo) {
             <p class="desc"></p>
             <div class="repo-info">
               <div class="info-container">
-                <i class="ri-circle-fill info-icon"></i> <p class="language"></p>
+                <i class="ri-circle-fill info-icon"></i> <p class="language">${repo.language || 'Unknown'}</p>
               </div>
 
               <div class="info-container">
-                <i class="ri-star-fill info-icon"></i> <p class="stars"></p>
+                <i class="ri-star-fill info-icon"></i> <p class="stars">${formatNumber(repo.stargazers_count)}</p>
               </div>
         
               <div class="info-container">
-                <i class="ri-git-fork-line info-icon"></i> <p class="forks"></p>
+                <i class="ri-git-fork-line info-icon"></i> <p class="forks">${formatNumber(repo.forks_count)}</p>
               </div>
         
               <div class="info-container">
-                <i class="ri-spam-2-line info-icon"></i> <p class="issues"></p>
+                <i class="ri-spam-2-line info-icon"></i> <p class="issues">${formatNumber(repo.open_issues_count)}</p>
               </div>
             </div>
             
-            <a class="visit-btn" target="_blank">Get in touch <i class="ri-external-link-line"></i></a>
+            <a class="visit-btn" href="${repo.html_url}" target="_blank">Get in touch <i class="ri-external-link-line"></i></a>
             `;
+        
             viewCard.querySelector('h3').textContent = repo.name;
             viewCard.querySelector('.desc').textContent = repo.description || 'No description.';
-            viewCard.querySelector('.visit-btn').href = repo.html_url;
             const langColor = getLangColor(repo.language);
             viewCard.querySelector('.ri-circle-fill').style.color = langColor;
-            viewCard.querySelector('.language').textContent = repo.language || 'Unknown';
-            viewCard.querySelector('.stars').textContent = repo.stargazers_count;
-            viewCard.querySelector('.forks').textContent = repo.forks_count;
-            viewCard.querySelector('.issues').textContent = repo.open_issues_count;
             viewCard.classList.add('success-card');
             search.textContent = 'Refresh';
             search.disabled = false;

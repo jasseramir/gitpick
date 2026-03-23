@@ -206,3 +206,10 @@ body {
 .failed-btn {
   background-color: var(--accent-red) !important;
 }
+
+@media (min-width: 768px) {
+  .repo-info {
+    justify-content: center;
+    gap: 25px;
+  }
+}
