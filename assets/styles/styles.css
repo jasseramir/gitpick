@@ -141,8 +141,13 @@ body {
 }
 
 .success-card h3 {
+  display: block
+  max-width: 100%;
   font-size: 1.4rem;
   margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: var(--black);
 }
 
