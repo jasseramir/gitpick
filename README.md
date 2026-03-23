@@ -48,9 +48,15 @@ To run this project locally, you only need a modern web browser.
 
 ## 📁 Project Structure
 
-index.html                 # Main structure of the app
-assets/styles/styles.css   # UI & layout styling
-assets/scripts/script.js  # Logic and API handling
+```bash
+GitPick/
+├── index.html
+└── assets
+    ├── scripts
+    │   └── script.js
+    └── styles
+        └── styles.css
+```
 
 ---
 
