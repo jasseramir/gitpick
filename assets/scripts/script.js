@@ -121,7 +121,7 @@ function renderPage(repo) {
               </div>
             </div>
             
-            <a class="visit-btn" href="${repo.html_url}" target="_blank">Get in touch <i class="ri-external-link-line"></i></a>
+            <a class="visit-btn" href="${repo.html_url}" target="_blank">Get In Touch <i class="ri-external-link-line"></i></a>
             `;
         
             viewCard.querySelector('h3').textContent = repo.name;
