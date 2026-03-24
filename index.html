@@ -35,31 +35,63 @@
 </head>
 <body>
   <main class="container">
+    <!-- Headers -->
     <h1 class="title"><span>Git</span>Pick</h1>
     <h2 class="subtitle">The smartest way to discover your next open-source project idea from GitHub.</h2>
+    
+    <!-- Select List -->
     <div class="select-list-container">
       <select class="select-list" id="langList">
+        <!-- "%2B" means +, "%23" means # -->
         <option value="" selected disabled>Select a language</option>
+        
         <option value="javascript">JavaScript</option>
-        <option value="typescript">TypeScript</option> <option value="python">Python</option>
-        <option value="java">Java</option> <option value="c">C Language</option>
-        <option value="cpp">C++</option>
-        <option value="csharp">C#</option>
+        <option value="typescript">TypeScript</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="c">C Language</option>
+        
+        <option value="c%2B%2B">C++</option>
+        <option value="c%23">C#</option>
         <option value="go">Go</option>
         <option value="rust">Rust</option>
         <option value="php">PHP</option>
+        
         <option value="swift">Swift</option>
         <option value="kotlin">Kotlin</option>
+        <option value="ruby">Ruby</option>
+        <option value="dart">Dart</option>
+        <option value="scala">Scala</option>
+        
+        <option value="shell">Shell</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="objective-c">Objective-C</option>
+        <option value="objective-c%2B%2B">Objective-C++</option>
+        
+        <option value="r">R</option>
+        <option value="matlab">MATLAB</option>
+        <option value="groovy">Groovy</option>
+        <option value="powershell">PowerShell</option>
+        <option value="elixir">Elixir</option>
+        
+        <option value="clojure">Clojure</option>
+        <option value="haskell">Haskell</option>
+        <option value="lua">Lua</option>
+        <option value="perl">Perl</option>
       </select>
 
       <i class="ri-arrow-down-s-line"></i>
     </div>
     
+    <!-- Output -->
     <div id="viewCard"></div>
     
+    <!-- Search And Refresh Buttons -->
     <button class="btn" id="searchBtn"></button>
   </main>
   
+  <!-- The JavaScript File -->
   <script src="assets/scripts/script.js"></script>
 </body>
 </html>
