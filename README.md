@@ -17,6 +17,18 @@ It uses the GitHub Search API to provide a randomized selection of repositories 
 
 ---
 
+## 📸 Interface Preview
+
+| Desktop / Landscape View |
+| :---: |
+| ![Desktop View](./screenshots/05.png) |
+
+| Start Screen | Loading State | Success Result | Error Handling |
+| :---: | :---: | :---: | :---: |
+| ![Start](./screenshots/01.png) | ![Loading](./screenshots/02.png) | ![Success](./screenshots/03.png) | ![Error](./screenshots/04.png) |
+
+---
+
 ## 🛠 Tech Stack
 
 - **Frontend:** HTML5, CSS3  
