@@ -1,0 +1,117 @@
+/* Layout for empty and failed card states */
+.empty-selection-card, .failed-card {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  border-radius: 15px;
+  margin-block: 20px;
+}
+
+.empty-selection-card {
+  background-color: var(--bg-gray);
+  color: var(--text-gray);
+}
+
+.failed-card {
+  background-color: var(--failed-bg);
+  color: var(--failed-text);
+  line-height: 1.5;
+}
+
+/* Loading card with skeleton animation container */
+.loading-card {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  margin-block: 20px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Skeleton animation and background styling */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+@keyframes loading-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Dimensions for various skeleton parts */
+.skeleton-title { width: 60%; height: 24px; margin-bottom: 15px; }
+.skeleton-text, .skeleton-text-last { height: 16px; margin-bottom: 10px; }
+.skeleton-text { width: 90%; }
+.skeleton-text-last { width: 75%; }
+.skeleton-info { width: 100%; height: 20px; display: inline-block; }
+.skeleton-btn { width: 100%; height: 40px; margin-top: 20px; margin-inline: auto; border-radius: 10px; }
+
+/* Successful repository card layout */
+.success-card {
+  width: 100%;
+  padding: 20px;
+  text-align: start;
+  border: 2px solid var(--black);
+  border-radius: 15px;
+  margin-block: 20px;
+  background-color: var(--white);
+}
+
+/* Repository title with ellipsis for long text */
+.success-card h3 {
+  max-width: 100%;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--black);
+}
+
+/* Repository description with multi-line clamp */
+.success-card .desc {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin-bottom: 15px;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Bottom info section for stars, forks, etc. */
+.repo-info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  font-weight: var(--font-medium);
+  color: var(--text-gray);
+}
+
+.info-container .info-icon {
+  font-size: 1rem;
+}

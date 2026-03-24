@@ -1,0 +1,12 @@
+/* Responsive adjustments for desktop screens */
+@media (min-width: 768px) {
+  .repo-info {
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .visit-btn { width: 70%; }
+  
+  .skeleton-info { margin-inline: auto; }
+  .skeleton-btn { width: 67%; }
+}
