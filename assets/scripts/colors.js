@@ -1,7 +1,7 @@
 // Map programming language names to their official brand colors
-function getLangColor(value) {
-    const unknown = '#8b949e';
-    if (!value) return unknown;
+export function getLangColor(value) {
+    const UNKNOWN_COLOR = '#8b949e';
+    if (!value) return UNKNOWN_COLOR;
     
     const colors = {
         'javascript': '#f1e05a',
@@ -38,9 +38,10 @@ function getLangColor(value) {
         'haskell': '#5e5086',
         'lua': '#000080',
         'perl': '#0298c3',
-        'assembly': '#6E4C13'
+        'assembly': '#6E4C13',
+        'sql': '#e38c00'
     };
     
     // Return a default gray color if color is not found
-    return colors[value?.toLowerCase()] || unknown;
+    return colors[value?.toLowerCase()] || UNKNOWN_COLOR;
 }
