@@ -62,14 +62,29 @@ You can access the live project [here](https://jasseramir.github.io/gitpick/) or
 
 ## 📁 Project Structure
 
+> **Note:** This structure highlights the core files of the application.
+> Additional assets are simplified for clarity.
+
 ```bash
 GitPick/
-├── index.html
+├── index.html      // entry html file
+├── README.md       // project documentation
+├── LICENSE         // MIT license
+├── screenshots/    // preview images
 └── assets
     ├── scripts
-    │   └── script.js
-    └── styles
-        └── styles.css
+    │   ├── main.js           // entry point
+    │   ├── data.js           // fetch logic
+    │   ├── ui.js             // rendering
+    │   ├── utils.js          // helper functions
+    │   └── colors.js         // language colors
+    ├── styles
+    │   ├── base.css          // global styles & variables
+    │   ├── select.css        // select element styling
+    │   ├── card.css          // card layout & states
+    │   ├── buttons.css       // buttons styling
+    │   └── responsive.css    // responsive design
+    └── images/               // project images & icons
 ```
 
 ### 📄 File Descriptions
